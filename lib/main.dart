@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MaterialApp(
-      home: TextDemo(),
+//      home: TextDemo(),
+      home: ImageDemo(),
     ));
 
 class MyApp extends StatelessWidget {
@@ -77,11 +78,19 @@ class ImageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Image.network(
-      'https://gw.alicdn.com/tfs/TB1CgtkJeuSBuNjy1XcXXcYjFXa-906-520.png',
-      fit: BoxFit.contain,
-      width: 50.0,
-      height: 50.0,
+    return Scaffold(
+      appBar: AppBar(
+        title: new Text("图片小Demo"),
+      ),
+      body: Container(
+        child: new Image.network(
+          'https://gw.alicdn.com/tfs/TB1CgtkJeuSBuNjy1XcXXcYjFXa-906-520.png',
+          fit: BoxFit.contain,
+          width: 500.0,
+          height: 400.0,
+
+        ),
+      ),
     );
   }
 }
